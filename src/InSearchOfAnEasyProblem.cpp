@@ -1,6 +1,6 @@
 // 1030A. In Search of an Easy Problem
 
-#include<iostream>
+#include <iostream>
 
 int main() {
     short n;
