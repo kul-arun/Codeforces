@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 int main() {
     int t;
@@ -11,13 +12,9 @@ int main() {
         std::cin >> n;
         std::vector<int> v(n);
         for (int i=0; i<n; ++i) {
-            char c;
-            for (int k=1; k<=4; ++k) {
-                std::cin >> c;
-                if (c == '#') {
-                    v[i] = k;
-                }
-            }
+            std::string s;
+            std::cin >> s;
+            v[i] = (int) s.find('#') + 1;
         }
         for (auto it = v.rbegin(); it != v.rend(); ++it) {
             std::cout << *it << ' ';
